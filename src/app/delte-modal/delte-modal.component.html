@@ -1,0 +1,15 @@
+<div clas="list rounded-20 shadow-5">
+  <div class="modal-header btn btn-red">
+  <h4 class="modal-title">Attention!</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span class="text-white"aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>Voulez vous vraiment effacer ce vol : <b>{{vol.volNumber}}!</b></p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('Close click')">Cancel</button>
+  <button type="button" class="btn btn-outline-danger" (click)="delete()">Oui</button>
+</div>
+</div>

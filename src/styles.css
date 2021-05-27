@@ -1,0 +1,72 @@
+body{
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(assets/airport.webp);
+  background-origin: border-box;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.list{
+  background-color: rgba(255,255,255,0.9);
+  }
+  .shadow-5{
+    box-shadow: 0 1px 3px rgba(255,255,255,1);
+  }
+
+
+.btn-info{
+  color:rgb(255, 255, 255,1);
+  text-shadow: 0 1px 0.5px rgb(56, 55, 55);
+  background:linear-gradient(to bottom,rgba(1, 171, 223, 0.8)0%,rgba(1, 171, 223, 1)10%,rgb(1, 104, 136)100%);
+  box-shadow: 0 1px 3px rgb(0, 0, 0);
+  }
+  .btn-purple{
+    color:rgb(255, 255, 255,1);
+    text-shadow: 0 1px 0.5px rgb(56, 55, 55);
+    background:linear-gradient(to bottom,rgba(205, 1, 223, 0.8)0%,rgba(205, 1, 223, 1)10%,rgb(112, 2, 122)100%);
+    box-shadow: 0 1px 3px rgba(255,255,255,1);
+    }
+    .btn-red{
+      color:rgb(255, 255, 255,1);
+      text-shadow: 0 1px 0.5px rgb(56, 55, 55);
+      background:linear-gradient(to bottom,rgba(223, 1, 1, 0.8)0%,rgba(223, 1, 1, 1)10%,rgb(105, 1, 1)100%);
+      box-shadow: 0 0.5px 0.5px rgba(255,255,255,1);
+      }
+      .btn:hover{
+        margin:1px;
+        color:rgba(255,255,255,0.95);text-shadow: 0 0.5px 0.2px rgba(0, 0, 0, 1);
+        box-shadow: 0 3px 7px rgba(255,255,255,1);
+      }
+.text-shadow-5{
+  text-shadow: 0 1px 3px rgba(0, 0, 0,0.8);
+}
+.text-shadow-10{
+  text-shadow: 0 3px 3px rgba(0, 0, 0,0.8);
+}
+.text-green{
+  color:rgb(3, 97, 58);
+  text-shadow: 0 0.5px 0.2px rgba(0, 0, 0,0.5);
+}
+.text-blue{
+color:rgba(1, 118, 153, 0.8);
+text-shadow: 0 0.5px 0.2px rgba(0, 0, 0,0.7);
+}
+.rounded-20{
+  border-radius: 20px;
+}
+.rounded-10{
+  border-radius: 10px;
+}
+.close{
+font-size:25px;
+margin: 1px 5px;
+color:rgba(0, 0, 0,1);
+}
+.close:hover{
+  font-size:26px;
+  margin: 1px 5px;
+  color:rgb(175, 4, 4);
+  transition:ease-in 0.4s;
+}
+input:focus{
+  border:1px solid cadetblue;
+}

@@ -1,0 +1,63 @@
+<form class="container border text-dark border-primay rounded list m-auto justify-content-around p-3" [formGroup]="form" (ngSubmit)="submitForm()">
+  <a [routerLink]="['/home']" class="float-right close">X</a>
+  <div *ngIf="!form.valid && formSubmitted">
+    <ul class="d-flex list-unstyled">
+      <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.volNumber.valid">Numéro de vol invalide</li>
+      <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.departureAirportCode.valid">Aéroport de départ invalide</li>
+      <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.arrivalAirportCode.valid">Aéroport d'arrivé invalide</li>
+      <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.departureDate.valid">Date de départ invalide</li>
+      </ul>
+      <ul class="d-flex list-unstyled">
+        <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.arrivalDate.valid">Date d'arrivée invalide</li>
+      <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.departureTime.valid">Heure d'arrivée invalide</li>
+      <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.arrivalTime.valid">Heure d'arrivée invalide</li>
+      <li class="w-25 d-block text-center btn btn-red border border-dark py-1" *ngIf="!form.controls.price.valid">Prix invalide</li>
+  </ul>
+</div>
+  <ul class="d-flex list-unstyled justify-content-start w-100">
+    <li class="d- flex w-50 p-3">
+      <div class="form-group text-end d-flex m-2">
+        <label class=""for="aeroportDepart">Code Aéroprort de départ  :</label>
+        <input formControlName="departureAirportCode" id="aeroportDepart" type="text">
+      </div>
+
+      <div class="form-group m-2">
+        <label for="dateDepart">Date de départ : </label>
+        <input formControlName="departureDate" id="dateDepart" type="date">
+      </div>
+      <div class="form-group m-2">
+        <label for="datearrivee">Date d'arrivée : </label>
+        <input formControlName="arrivalDate" id="datearrivee" type="date">
+      </div>
+      <div class="form-group m-2">
+        <label for="price">Prix : </label>
+        <input formControlName="price" id="price" type="number">
+      </div>
+    </li>
+    <li class="w-50 align-items-end p-3">
+      <div class="form-group m-2">
+        <label for="numeroVol">numeroVol : </label>
+        <input formControlName="volNumber" id="numeroVol" type="text">
+      </div>
+      <div class="form-group m-2">
+        <label for="arrivalAirportCode">Code Aéroport d'arrivée : </label>
+        <input formControlName="arrivalAirportCode" id="arrivalAirportCode" type="text">
+      </div>
+      <div class="form-group m-2">
+        <label for="HeureDeDepart">Heure de Départ : </label>
+        <input formControlName="departureTime" id="HeureDeDepart" type="time">
+      </div>
+      <div class="form-group m-2">
+        <label for="heureArrivee">Heure d'arrivee : </label>
+        <input formControlName="arrivalTime" id="heureArrivee" type="time">
+      </div>
+      <div class="form-group m-2">
+        <label for="late">Vol en retard : </label>
+      <input class="w-4 m-0 p-0 " type="checkbox" formControlName="late" id="late">
+    </div>
+
+    </li>
+  </ul>
+  <button class="btn btn-info" type="submit">Ajouter les informations</button>
+  <!---->
+</form>

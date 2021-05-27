@@ -1,0 +1,15 @@
+<ul class="d-flex text-dark list-unstyled border border-primary rounded list shadow-5 p-3">
+  <li>
+    <p><b>Vol N° : {{vol.volNumber}}</b></p>
+    <button class="btn btn-info rounded" [routerLink]="['/vols', vol.id]">+ d'infos</button>
+    <img class="avion" src="../../assets/avion.webp" alt="avion de ligne">
+  </li>
+  <li>
+    <p class="text-green">Aéroport de depart : <span class="text-dark">{{vol.departureAirportCode}}</span></p>
+    <p class="text-green">Date et heure : <span class="text-dark">{{vol.departureDate | date: 'EEEE d MMMM y' }}</span></p>
+  </li>
+  <li>
+    <p class="text-blue">Aéroport d'arrivée' : <span class="text-dark">{{vol.arrivalAirportCode}}</span></p>
+    <p class="text-blue">Date et heure : <span class="text-dark">{{vol.arrivalDate | date: 'EEEE d MMMM y' }}</span></p>
+  </li>
+</ul>

@@ -1,0 +1,19 @@
+<div class="text-dark border border-primary rounded list shadow-5 p-3 mx-auto ">
+  <a [routerLink]="['/home']" class="float-right close">X</a>
+  <div><h1 class="text-shadow-5 text-success">Vol : {{vol.volNumber}}</h1>
+  <p *ngIf="vol.late ===true"class="d-flex mx-1 text-center btn btn-red">Le vol N°<b>{{vol.volNumber}}</b> est en retard</p></div>
+  <h3 class="d-block ml-5 my-3">Prix : <b>{{vol.price}}€</b></h3>
+  <ul class="d-flex w-100 list-unstyled">
+
+    <li class="text-start w-50">
+    <p class="text-green text-left ml-5">Aéroport de départ : <span class="text-dark">{{vol.departureAirportCode}}</span></p>
+    <p class="text-green text-left ml-5">Date et heure : <span class="text-dark">{{vol.arrivalDate | date: 'EEEE d MMMM y' }}</span></p>
+</li>
+  <li class="text-left ml-5 w-50">
+    <p class="text-blue text-left ml-5">Aéroport d'arrivée : <span class="text-dark">{{vol.arrivalAirportCode}}</span> </p>
+    <p class="text-blue text-left ml-5">Date et heure : <span class="text-dark">{{vol.arrivalDate | date: 'EEEE d MMMM y' }}</span></p>
+  </li>
+</ul>
+
+<button class="btn btn-info"(click)="dispalayModal()">Supprimer ce produit? </button>
+</div>

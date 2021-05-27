@@ -1,0 +1,5 @@
+<h2 class="text-shadow-10">Liste des vols</h2>
+<label (input)="setFilter($event)" class="mr-2" for="search"><p class="text-shadow-10">Rechercher numéro de vol</p></label>
+  <input  id="search" name="search" type="text">
+<app-vols [vol]="vol" (evt)="receiveChildrenEvt($event)" *ngFor="let vol of filterList()"></app-vols>
+<button class="btn btn-purple" [routerLink]="['/add']">Ajouter un vol : </button>
